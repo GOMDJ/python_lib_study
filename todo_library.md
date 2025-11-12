@@ -1,7 +1,7 @@
 ## 1단계: Python 내장 기초 (1주)
-json, datetime, os/pathlib
+json, datetime/time, os/pathlib/shutil
 typing, collections, re
-python-dotenv
+python-dotenv, sys, subprocess
 
 ## 2단계: 데이터 처리 핵심 (3주)
 numpy → pandas → matplotlib
@@ -38,15 +38,28 @@ scikit-learn → PyTorch 기초
 - **argparse** - CLI 도구 만들 때
 - **functools** - 데코레이터, 고급 함수 패턴
 - **itertools** - 반복자 조합/최적화
+- **uuid** - 고유 ID 생성
+- **hashlib** - 해시 생성 (MD5, SHA256)
+- **base64** - 인코딩/디코딩
+- **sqlite3** - 간단한 내장 DB
+- **configparser** - ini 파일 파싱
+- **concurrent.futures** - 멀티스레드/프로세스
+- **glob** - 파일 패턴 매칭
 
 ### 데이터 시각화
 - **seaborn** - matplotlib보다 예쁜 그래프
 - **plotly** - 인터랙티브 시각화
 
+### 웹 프레임워크
+- **Flask** - 간단한 웹 프레임워크
+- **Django** - 풀스택 프레임워크
+- **starlette** - FastAPI 기반 저수준 프레임워크
+
 ### 데이터베이스 드라이버
 - **psycopg2** or **asyncpg** - PostgreSQL
 - **aiomysql** - MySQL (async)
 - **pymongo** - MongoDB
+- **motor** - MongoDB (async)
 
 ### 웹 크롤링 고급
 - **selenium** - 브라우저 자동화 (느림)
@@ -57,6 +70,7 @@ scikit-learn → PyTorch 기초
 - **openpyxl** - 엑셀 읽기/쓰기
 - **PyPDF2** or **pdfplumber** - PDF 처리
 - **python-docx** - Word 문서
+- **pyyaml** - YAML 파일 읽기/쓰기
 
 ### 웹 관련
 - **jinja2** - HTML 템플릿 엔진
