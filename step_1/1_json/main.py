@@ -1,17 +1,41 @@
+#loads(string용 : string -> dict
+#dumps(string용) : dict -> string
+#load(파일용)
+#dump(파일용)
+
 import json
 
-"""
-json.dumps : 딕셔너리 -> json형태로 변환
-            왜 하냐, 딕셔너리는 파이썬만 읽을 수 있지만 json은 모든 언어 공통
-"""
-data = {'name' : 'john',
-        'age' : '20'
-        }
+api_response = '''
+{
+  "status": "success",
+  "data": {
+    "users": [
+      {"id": 1, "name": "철수"},
+      {"id": 2, "name": "영희"}
+    ]
+  }
+}
+'''
+data = {
+    "name": "철수",
+    "active": True,
+    "score": None,
+    "tags": ["python", "coding"]
+}
 
-str_data = json.dumps(data)
+response = json.loads(api_response)
+print(response)
 
-print(data)
-print(str_data)
-print(type(data))
-print(type(str_data))
+json_data = json.dumps(data)
+print(json_data)
 
+with open("user_1.json", "w", encoding = "utf-8")as f:
+  json.dump(data, f, indent = 2, ensure_ascii=False)
+
+with open("user_1.json", "r", encoding="utf-8") as f:
+  loaded_data = json.load(f)
+
+print(loaded_data)
+
+name = response["data"]["users"][0]["id"]
+print(name)
