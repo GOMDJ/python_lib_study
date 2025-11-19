@@ -17,7 +17,7 @@ print(file)
 path = Path("/home/user/project/data/users.json")   # 경로가 /로 시작하면 절대경로(루트 디렉토리부터 시작)
 print(path.name)    #users.json 
 print(path.stem)    #users 
-print(path.suffix)  #json 
+print(path.suffix)  #확장자 표시 .json, 슬라이싱 사용해서 suffix[1:]하면 '.'사라지고 확장자만 표시 가능
 print(path.parent)  #/home/user/project/data
 print(path.parts)   #('/', 'home', 'user', 'project', 'data', 'users.json')
 # %%
